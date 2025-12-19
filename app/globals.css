@@ -1,0 +1,160 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Updated to MRE Wallet Engine fintech color scheme */
+:root {
+  /* Fintech Primary - Deep Navy */
+  --primary: oklch(0.155 0.02 245);
+  --primary-light: oklch(0.21 0.02 245);
+  --primary-foreground: oklch(0.985 0 0);
+
+  /* Accent - Fintech Blue */
+  --accent: oklch(0.55 0.18 250);
+  --accent-hover: oklch(0.48 0.18 250);
+  --accent-foreground: oklch(0.985 0 0);
+
+  /* Success / Warning / Error */
+  --success: oklch(0.55 0.18 145);
+  --warning: oklch(0.65 0.18 50);
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(0.985 0 0);
+
+  /* Backgrounds - Dark Theme */
+  --background: oklch(0.08 0.01 245);
+  --bg-card: oklch(0.08 0.01 245);
+  --bg-muted: oklch(0.08 0.01 245);
+
+  /* Cards & Surfaces */
+  --card: oklch(0.08 0.01 245);
+  --card-foreground: oklch(0.92 0.01 245);
+  --popover: oklch(0.08 0.01 245);
+  --popover-foreground: oklch(0.92 0.01 245);
+
+  /* Secondary */
+  --secondary: oklch(0.21 0.02 245);
+  --secondary-foreground: oklch(0.985 0 0);
+
+  /* Muted */
+  --muted: oklch(0.21 0.02 245);
+  --muted-foreground: oklch(0.65 0.01 245);
+
+  /* Text Colors */
+  --foreground: oklch(0.92 0.01 245);
+  --text-primary: oklch(0.92 0.01 245);
+  --text-secondary: oklch(0.68 0.01 245);
+  --text-muted: oklch(0.52 0.01 245);
+
+  /* Borders & Inputs */
+  --border: oklch(0.21 0.02 245);
+  --input: oklch(0.21 0.02 245);
+  --ring: oklch(0.55 0.18 250);
+
+  /* Chart Colors */
+  --chart-1: oklch(0.55 0.18 250);
+  --chart-2: oklch(0.55 0.18 145);
+  --chart-3: oklch(0.65 0.18 50);
+  --chart-4: oklch(0.65 0.18 320);
+  --chart-5: oklch(0.55 0.22 25);
+
+  --radius: 0.5rem;
+
+  /* Sidebar */
+  --sidebar: oklch(0.08 0.01 245);
+  --sidebar-foreground: oklch(0.92 0.01 245);
+  --sidebar-primary: oklch(0.55 0.18 250);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.21 0.02 245);
+  --sidebar-accent-foreground: oklch(0.92 0.01 245);
+  --sidebar-border: oklch(0.21 0.02 245);
+  --sidebar-ring: oklch(0.55 0.18 250);
+}
+
+.dark {
+  /* Same as root for this fintech dark-first design */
+  --background: oklch(0.08 0.01 245);
+  --foreground: oklch(0.92 0.01 245);
+  --card: oklch(0.08 0.01 245);
+  --card-foreground: oklch(0.92 0.01 245);
+  --popover: oklch(0.08 0.01 245);
+  --popover-foreground: oklch(0.92 0.01 245);
+  --primary: oklch(0.155 0.02 245);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.21 0.02 245);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.21 0.02 245);
+  --muted-foreground: oklch(0.65 0.01 245);
+  --accent: oklch(0.55 0.18 250);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.21 0.02 245);
+  --input: oklch(0.21 0.02 245);
+  --ring: oklch(0.55 0.18 250);
+  --chart-1: oklch(0.55 0.18 250);
+  --chart-2: oklch(0.55 0.18 145);
+  --chart-3: oklch(0.65 0.18 50);
+  --chart-4: oklch(0.65 0.18 320);
+  --chart-5: oklch(0.55 0.22 25);
+  --sidebar: oklch(0.08 0.01 245);
+  --sidebar-foreground: oklch(0.92 0.01 245);
+  --sidebar-primary: oklch(0.55 0.18 250);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.21 0.02 245);
+  --sidebar-accent-foreground: oklch(0.92 0.01 245);
+  --sidebar-border: oklch(0.21 0.02 245);
+  --sidebar-ring: oklch(0.55 0.18 250);
+}
+
+@theme inline {
+  --font-sans: "Inter", "Geist", "Geist Fallback", system-ui, sans-serif;
+  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
