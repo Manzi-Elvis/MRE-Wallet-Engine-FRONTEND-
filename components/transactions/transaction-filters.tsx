@@ -24,7 +24,7 @@ export function TransactionFilters() {
 
       {/* Type Filter */}
       <Select defaultValue="all">
-        <SelectTrigger className="w-full sm:w-[160px] h-10">
+        <SelectTrigger className="w-full sm:w-40 h-10">
           <SelectValue placeholder="Type" />
         </SelectTrigger>
         <SelectContent>
@@ -38,7 +38,7 @@ export function TransactionFilters() {
 
       {/* Status Filter */}
       <Select defaultValue="all">
-        <SelectTrigger className="w-full sm:w-[160px] h-10">
+        <SelectTrigger className="w-full sm:w-40 h-10">
           <SelectValue placeholder="Status" />
         </SelectTrigger>
         <SelectContent>
