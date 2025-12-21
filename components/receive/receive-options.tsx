@@ -55,7 +55,7 @@ export function ReceiveOptions() {
             <Button
               variant="outline"
               size="icon"
-              className="h-11 w-11 flex-shrink-0 bg-transparent"
+              className="h-11 w-11 shrink-0 bg-transparent"
               onClick={() => handleCopy(email, "email")}
             >
               {copied === "email" ? <CheckIcon className="h-4 w-4 text-success" /> : <CopyIcon className="h-4 w-4" />}
