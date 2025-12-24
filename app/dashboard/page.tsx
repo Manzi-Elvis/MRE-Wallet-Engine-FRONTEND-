@@ -3,6 +3,18 @@ import { BalanceCards } from "@/components/dashboard/balance-cards"
 import { QuickActions } from "@/components/dashboard/quick-actions"
 import { RecentTransactions } from "@/components/dashboard/recent-transactions"
 import { ActivityChart } from "@/components/dashboard/activity-chart"
+import { useState, useEffect } from "react"
+import { apiFetch } from "@/lib/api-fetch"
+import { Wallet } from "@/types/wallet"
+
+export function DashboardContent() {
+  const [wallet, setWallet] = useState<Wallet | null>(null);
+useEffect(() => {
+  apiFetch("/wallet/me")
+    .then((res: { json: () => any }) => res.json())
+    .then(setWallet);
+}, []);
+}
 
 export const metadata = {
   title: "Dashboard - MRE Wallet Engine",
